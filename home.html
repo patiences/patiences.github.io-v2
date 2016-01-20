@@ -3,7 +3,8 @@
 <html>
   <head>
     <title>homePage</title>
-    //<link rel="stylesheet" href="home.css" type="text/css">
+    <link rel="stylesheet" href="home.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
@@ -12,7 +13,7 @@
       <div align="center">
         <!--Name-->
         <h1>
-          <div class="neon">Hi, I'm Pati<span class="delay">en</span>ce.</div>
+            <div class="lasvegas">H<span>i,</span> I'm Pati<span class="delay">en</span>ce.</div>
         </h1>
 
         <!--About-->
@@ -90,8 +91,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
     <!-- Script for neon effect -->
-    <script src="jquery-2.1.1.js"></script>
-    <script>$( function(){ //code });</script>
     <script type="text/javascript">
       $(document).ready(function() {
         $("body").css("display", "none");
@@ -99,10 +98,12 @@
     </script>
 
     <!-- Script for neon pulsing effect -->
+    <script src="jquery-2.1.1.js"></script>
+    <script>$(function(){ //code });</script>
     <script type="text/javascript">
       $(document).ready(function() {
         $("body").css("display", "none");
-        $("body").fadeIn(2000);
+        $("body").fadeIn(1000);
       });
     </script>
 
