@@ -1,6 +1,15 @@
 @font-face {
-    font-family: signFont;
+    font-family: nameFont;
     src: url(neon.TTF);
+}
+
+@font-face {
+  font-family: 'projectsFont';
+  src: url(Kabel.otf);
+}
+@font-face {
+    font-family: followMeToFont;
+    src: url(LOSTWAGE.TTF);
 }
 
 body {
@@ -14,7 +23,7 @@ body {
 }
 
 .lasvegas {
-  font-family: 'signFont';
+  font-family: 'nameFont';
   font-size:90px;
   border: none;
   color: transparent;
@@ -22,12 +31,7 @@ body {
   text-shadow:
   0 0 2px rgba(255,255,255,1),
   0 0 10px rgba(255,255,255,1),
-  0 0 20px rgba(255,255,255,1),
-  0 0 30px rgba(255,255,255,1),
-  0 0 40px #0489B1,
-  0 0 70px #0489B1,
-  0 0 80px #0489B1,
-  0 0 100px #0489B1;
+  0 0 20px rgba(255,255,255,1)
 }
 
 .lasvegas span{
@@ -40,6 +44,32 @@ body {
   animation-direction: alternate;
   cubic-bezier(0.5, 0.2, 0.3, 1.0)
 }
+
+.grouse {
+  font-family: 'projectsFont';
+  font-size:50px;
+  border: none;
+  color: transparent;
+  text-align: left;
+  text-shadow:
+  0 0 2px rgba(255,25,25,1),
+  0 0 10px rgba(255,25,25,1),
+  0 0 20px rgba(255,25,25,1)
+}
+
+.cypress {
+  font-family: 'followMeToFont';
+  font-size:55px;
+  border: none;
+  color: transparent;
+  text-align: right;
+  text-shadow:
+  0 0 2px rgba(25,200,255,1),
+  0 0 10px rgba(25,200,255,1),
+  0 0 20px rgba(25,200,255,1)
+}
+
+
 
 @keyframes blink {
   0%   {}
@@ -80,4 +110,13 @@ body {
   0 0 80px #0489B1,
   0 0 100px #0489B1;
   }
+}
+
+h3 {
+  color:white;
+}
+
+h4 {
+  color:white;
+  text-align:right;
 }
