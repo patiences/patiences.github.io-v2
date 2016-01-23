@@ -120,3 +120,37 @@ h4 {
   color:white;
   text-align:right;
 }
+
+.icon-github {
+  position:absolute;
+  transition: .5s ease;
+  top: 50%;
+  left: 50%
+}
+
+.icon-linkedin {
+  position:absolute;
+  transition: .5s ease;
+  top: 50%;
+  left: 20%
+}
+
+.icon-twitter {
+  position:absolute;
+  transition: .5s ease;
+  top: 50%;
+  left: 70%
+}
+
+.icon-facebook {
+  position:absolute;
+  transition: .5s ease;
+  top: 50%;
+  left: 80%
+}
+
+.icon-email {
+  position:absolute;
+  transition: .5s ease;
+  top: 50%;
+}
