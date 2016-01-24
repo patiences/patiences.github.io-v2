@@ -201,3 +201,12 @@ h4 {
 .icon-email:hover {
       opacity: 1;
 }
+
+a {
+  color: white; 
+  text-decoration:none;
+}
+
+a:hover {
+  color: red;
+}
