@@ -124,33 +124,34 @@ h4 {
 .icon-github {
   position:absolute;
   transition: .5s ease;
-  top: 50%;
-  left: 50%
+  top: 70%;
+  left: 26.75%
 }
 
 .icon-linkedin {
   position:absolute;
   transition: .5s ease;
-  top: 50%;
-  left: 20%
+  top: 75%;
+  left: 22.9%
 }
 
 .icon-twitter {
   position:absolute;
   transition: .5s ease;
-  top: 50%;
+  top: 70%;
   left: 70%
 }
 
 .icon-facebook {
   position:absolute;
   transition: .5s ease;
-  top: 50%;
-  left: 80%
+  top: 75%%;
+  left: 73.5%
 }
 
 .icon-email {
   position:absolute;
   transition: .5s ease;
-  top: 50%;
+  top: 79.8%;
+  left: 18.6%
 }
