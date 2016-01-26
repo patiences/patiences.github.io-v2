@@ -202,8 +202,12 @@ h4 {
       opacity: 1;
 }
 
+h1 {
+  color: white;
+}
+
 a {
-  color: white; 
+  color: white;
   text-decoration:none;
 }
 
