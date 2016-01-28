@@ -12,6 +12,11 @@
     src: url(LOSTWAGE.TTF);
 }
 
+@font-face {
+  font-family: typewriterFont;
+  src: url(typewriter.ttf);
+}
+
 body {
   display: none;
   background-image: url("images/patience.jpeg");
@@ -202,18 +207,31 @@ h4 {
       opacity: 1;
 }
 
+.typed {
+  position:relative;
+	left: 180px;
+	bottom: -100px;
+  font-family: typewriterFont;
+}
+
 h1 {
   color: white;
-  font-family: 'Poiret One', cursive;}
+  font-family: 'Poiret One', cursive;
+}
 
 h2 {
-  font-family: 'Poiret One', cursive;}
+  font-family: 'Poiret One', cursive;
+}
 
 h3 {
-  font-family: 'Poiret One', cursive;}
+  font-family: 'Poiret One', cursive;
+}
 
 h4 {
-  font-family: 'Poiret One', cursive;}
+  font-family: 'Poiret One', cursive;
+  position:relative;
+  bottom: -130px;
+}
 
 a {
   color: white;
