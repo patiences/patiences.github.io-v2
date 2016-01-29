@@ -63,8 +63,8 @@ body {
 }
 
 .cypress {
-  font-family: 'followMeToFont';
-  font-size:55px;
+  font-family: 'projectsFont';
+  font-size:50px;
   border: none;
   color: transparent;
   text-align: right;
@@ -239,12 +239,14 @@ h3 {
   font-family: 'Poiret One', cursive;
   position: relative;
   bottom: -50px;
+  font-size: 22px;
 }
 
 h4 {
   font-family: 'Poiret One', cursive;
   position: relative;
   bottom: -120px;
+  font-size: 20px;
 }
 
 a {
