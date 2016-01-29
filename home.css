@@ -7,10 +7,6 @@
   font-family: 'projectsFont';
   src: url(Kabel.otf);
 }
-@font-face {
-    font-family: followMeToFont;
-    src: url(LOSTWAGE.TTF);
-}
 
 @font-face {
   font-family: typewriterFont;
