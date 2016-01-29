@@ -40,12 +40,12 @@ body {
 }
 
 .lasvegas span{
-  animation: blink .3s infinite alternate;
+  animation: blink .5s infinite alternate;
 }
 
 .lasvegas span.delay{
-  animation-duration:6s;
-  animation-delay: 2s;
+  animation-duration:7s;
+  animation-delay: 3s;
   animation-direction: alternate;
   cubic-bezier(0.5, 0.2, 0.3, 1.0)
 }
@@ -130,8 +130,9 @@ h4 {
   position:absolute;
   transition: .5s ease;
   opacity: .7;
-  top: 70%;
-  left: 26.75%;
+  top: 40%;
+  left: 60%;
+  transform: rotate(270deg) translate(5em) rotate(-270deg);
 
   -moz-border-radius: 30px;
   border-radius: 30px;
@@ -146,8 +147,9 @@ h4 {
   position:absolute;
   transition: .5s ease;
   opacity: .7;
-  top: 75%;
-  left: 22.9%;
+  top: 40%;
+  left: 60%;
+  transform: rotate(342deg) translate(5em) rotate(-342deg);
 
   -moz-border-radius: 31px;
   border-radius: 31px;
@@ -162,8 +164,9 @@ h4 {
   position:absolute;
   transition: .5s ease;
   opacity: .7;
-  top: 70%;
-  left: 70%;
+  top: 40%;
+  left: 60%;
+  transform: rotate(414deg) translate(5em) rotate(-414deg);
 
   -moz-border-radius: 36px;
   border-radius: 36px;
@@ -178,8 +181,9 @@ h4 {
   position:absolute;
   transition: .5s ease;
   opacity: .7;
-  top: 74.9%;
-  left: 73.55%;
+  top: 40%;
+  left: 60%;
+  transform: rotate(486deg) translate(5em) rotate(-486deg);
 
   -moz-border-radius: 31px;
   border-radius: 31px;
@@ -194,13 +198,13 @@ h4 {
   position:absolute;
   transition: .5s ease;
   opacity: .7;
-  top: 79.8%;
-  left: 18.6%;
+  top: 40%;
+  left: 60%;
+  transform: rotate(558deg) translate(5em) rotate(-558deg);
 
   -moz-border-radius: 31px;
   border-radius: 31px;
   background-color: white;
-
 }
 
 .icon-email:hover {
@@ -208,10 +212,16 @@ h4 {
 }
 
 .typed {
-  position:relative;
-	left: 180px;
-	bottom: -100px;
   font-family: typewriterFont;
+  position: relative;
+  bottom: 25px;
+  font-size: 26;
+}
+
+.social {
+  position: relative;
+  left: 100px;
+  bottom: 100px;
 }
 
 h1 {
@@ -220,17 +230,21 @@ h1 {
 }
 
 h2 {
-  font-family: 'Poiret One', cursive;
+  font-family: 'Vampiro One', cursive;
+  text-decoration: none;
+  color: #fdfdfd
 }
 
 h3 {
   font-family: 'Poiret One', cursive;
+  position: relative;
+  bottom: -50px;
 }
 
 h4 {
   font-family: 'Poiret One', cursive;
-  position:relative;
-  bottom: -130px;
+  position: relative;
+  bottom: -120px;
 }
 
 a {
