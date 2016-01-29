@@ -117,15 +117,6 @@ body {
   }
 }
 
-h3 {
-  color:white;
-}
-
-h4 {
-  color:white;
-  text-align:right;
-}
-
 .icon-github {
   position:absolute;
   transition: .5s ease;
@@ -240,6 +231,7 @@ h3 {
   position: relative;
   bottom: -50px;
   font-size: 22px;
+    color:white;
 }
 
 h4 {
@@ -247,6 +239,8 @@ h4 {
   position: relative;
   bottom: -120px;
   font-size: 20px;
+  color:white;
+  text-align:right;
 }
 
 a {
