@@ -1,0 +1,249 @@
+@font-face {
+    font-family: nameFont;
+    src: url(neon.TTF);
+}
+
+@font-face {
+  font-family: 'projectsFont';
+  src: url(Kabel.otf);
+}
+
+@font-face {
+  font-family: typewriterFont;
+  src: url(typewriter.ttf);
+}
+
+body {
+  display: none;
+  background-image: url("images/patience.jpeg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.lasvegas {
+  font-family: 'nameFont';
+  font-size:90px;
+  border: none;
+  color: transparent;
+  text-align: center;
+  text-shadow:
+  0 0 2px rgba(255,255,255,1),
+  0 0 10px rgba(255,255,255,1),
+  0 0 20px rgba(255,255,255,1)
+}
+
+.lasvegas span{
+  animation: blink .5s infinite alternate;
+}
+
+.lasvegas span.delay{
+  animation-duration:7s;
+  animation-delay: 3s;
+  animation-direction: alternate;
+  cubic-bezier(0.5, 0.2, 0.3, 1.0)
+}
+
+.grouse {
+  font-family: 'projectsFont';
+  font-size:50px;
+  border: none;
+  color: transparent;
+  text-align: left;
+  text-shadow:
+  0 0 2px rgba(255,25,25,1),
+  0 0 10px rgba(255,25,25,1),
+  0 0 20px rgba(255,25,25,1)
+}
+
+.cypress {
+  font-family: 'projectsFont';
+  font-size:50px;
+  border: none;
+  color: transparent;
+  text-align: right;
+  text-shadow:
+  0 0 2px rgba(25,200,255,1),
+  0 0 10px rgba(25,200,255,1),
+  0 0 20px rgba(25,200,255,1)
+}
+
+
+
+@keyframes blink {
+  0%   {}
+  50%  {}
+  60%{
+    text-shadow:
+    0 0 2px rgba(255, 255, 255, .1),
+    0 0 10px rgba(255, 255, 255, .4);
+
+    text-stroke: 2px rgba(255,255,255,0.05);
+}
+70%{
+  text-shadow:
+  0 0 2px rgba(255,255,255,1),
+  0 0 10px rgba(255,255,255,1),
+  0 0 20px rgba(255,255,255,1),
+  0 0 30px rgba(255,255,255,1),
+  0 0 40px #0489B1,
+  0 0 70px #0489B1,
+  0 0 80px #0489B1,
+  0 0 100px #0489B1;
+}
+80%{
+  text-shadow:
+  0 0 2px rgba(255, 255, 255, .1),
+  0 0 10px rgba(255, 255, 255, .4);
+
+  text-stroke: 2px rgba(255,255,255,0.05);
+}
+100% {
+  text-shadow:
+  0 0 2px rgba(255,255,255,1),
+  0 0 10px rgba(255,255,255,1),
+  0 0 20px rgba(255,255,255,1),
+  0 0 30px rgba(255,255,255,1),
+  0 0 40px #0489B1,
+  0 0 70px #0489B1,
+  0 0 80px #0489B1,
+  0 0 100px #0489B1;
+  }
+}
+
+.icon-github {
+  position:absolute;
+  transition: .5s ease;
+  opacity: .7;
+  top: 40%;
+  left: 60%;
+  transform: rotate(270deg) translate(5em) rotate(-270deg);
+
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.icon-github:hover {
+      opacity: 1;
+}
+
+.icon-linkedin {
+  position:absolute;
+  transition: .5s ease;
+  opacity: .7;
+  top: 40%;
+  left: 60%;
+  transform: rotate(342deg) translate(5em) rotate(-342deg);
+
+  -moz-border-radius: 31px;
+  border-radius: 31px;
+  background-color: white;
+}
+
+.icon-linkedin:hover {
+      opacity: 1;
+}
+
+.icon-twitter {
+  position:absolute;
+  transition: .5s ease;
+  opacity: .7;
+  top: 40%;
+  left: 60%;
+  transform: rotate(414deg) translate(5em) rotate(-414deg);
+
+  -moz-border-radius: 36px;
+  border-radius: 36px;
+  background-color: white;
+}
+
+.icon-twitter:hover {
+      opacity: 1;
+}
+
+.icon-facebook {
+  position:absolute;
+  transition: .5s ease;
+  opacity: .7;
+  top: 40%;
+  left: 60%;
+  transform: rotate(486deg) translate(5em) rotate(-486deg);
+
+  -moz-border-radius: 31px;
+  border-radius: 31px;
+  background-color: white;
+}
+
+.icon-facebook:hover {
+      opacity: 1;
+}
+
+.icon-email {
+  position:absolute;
+  transition: .5s ease;
+  opacity: .7;
+  top: 40%;
+  left: 60%;
+  transform: rotate(558deg) translate(5em) rotate(-558deg);
+
+  -moz-border-radius: 31px;
+  border-radius: 31px;
+  background-color: white;
+}
+
+.icon-email:hover {
+      opacity: 1;
+}
+
+.typed {
+  font-family: typewriterFont;
+  position: relative;
+  bottom: 25px;
+  font-size: 26;
+}
+
+.social {
+  position: relative;
+  left: 100px;
+  bottom: 100px;
+}
+
+h1 {
+  color: white;
+  font-family: 'Poiret One', cursive;
+}
+
+h2 {
+  font-family: 'Vampiro One', cursive;
+  text-decoration: none;
+  color: #fdfdfd
+}
+
+h3 {
+  font-family: 'Poiret One', cursive;
+  position: relative;
+  bottom: -50px;
+  font-size: 22px;
+    color:white;
+}
+
+h4 {
+  font-family: 'Poiret One', cursive;
+  position: relative;
+  bottom: -120px;
+  font-size: 20px;
+  color:white;
+  text-align:right;
+}
+
+a {
+  color: white;
+  text-decoration:none;
+}
+
+a:hover {
+  color:  #e066ff;
+}
