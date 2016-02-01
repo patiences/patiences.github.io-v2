@@ -1,5 +1,5 @@
 @font-face {
-    font-family: nameFont;
+    font-family: 'nameFont';
     src: url(neon.TTF);
 }
 
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: typewriterFont;
+  font-family: 'typewriterFont';
   src: url(typewriter.ttf);
 }
 
@@ -47,15 +47,14 @@ body {
   0 0 20px rgba(255,255,255,1)
 }
 
-.lasvegas span{
+.lasvegas span {
   animation: blink .5s infinite alternate;
 }
 
-.lasvegas span.delay{
+.lasvegas span.delay {
   animation-duration:7s;
   animation-delay: 3s;
-  animation-direction: alternate;
-  cubic-bezier(0.5, 0.2, 0.3, 1.0)
+  animation-direction: alternate
 }
 
 .grouse {
