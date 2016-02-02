@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'nameFont';
-    src: url(neon.TTF);
+    src: url(fonts/neon.TTF);
 }
 
 @font-face {
   font-family: 'projectsFont';
-  src: url(Kabel.otf);
+  src: url(fonts/Kabel.otf);
 }
 
 @font-face {
   font-family: 'typewriterFont';
-  src: url(typewriter.ttf);
+  src: url(fonts/typewriter.ttf);
 }
 
 /* For width smaller than 400px: */
@@ -84,7 +84,7 @@ body {
 }
 
 .typed {
-  font-family: typewriterFont;
+  font-family: 'typewriterFont';
   position: relative;
   bottom: 25px;
   font-size: 26;
@@ -134,16 +134,16 @@ a:hover {
 }
 
 .icon-github {
+  width: 50px;
+  background-image: url(images/github.png);
+  height: 50px;
   position:absolute;
+  background-size: 100% auto;
   transition: .5s ease;
   opacity: .7;
-  top: 40%;
+  top: 30%;
   left: 60%;
-  transform: rotate(270deg) translate(5em) rotate(-270deg);
-
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  background-color: white;
+  transform: rotate(414deg) translate(4em) rotate(-414deg);
 }
 
 .icon-github:hover {
@@ -151,16 +151,16 @@ a:hover {
 }
 
 .icon-linkedin {
+  width: 50px;
+  background-image: url(images/linkedin.png);
+  height: 50px;
   position:absolute;
+  background-size: 100% auto;
   transition: .5s ease;
   opacity: .7;
-  top: 40%;
+  top: 30%;
   left: 60%;
-  transform: rotate(342deg) translate(5em) rotate(-342deg);
-
-  -moz-border-radius: 31px;
-  border-radius: 31px;
-  background-color: white;
+  transform: rotate(342deg) translate(4em) rotate(-342deg);
 }
 
 .icon-linkedin:hover {
@@ -168,16 +168,16 @@ a:hover {
 }
 
 .icon-twitter {
+  width: 50px;
+  background-image: url(images/twitter.png);
+  height: 50px;
   position:absolute;
+  background-size: 100% auto;
   transition: .5s ease;
   opacity: .7;
-  top: 40%;
+  top: 30%;
   left: 60%;
-  transform: rotate(414deg) translate(5em) rotate(-414deg);
-
-  -moz-border-radius: 36px;
-  border-radius: 36px;
-  background-color: white;
+  transform: rotate(270deg) translate(4em) rotate(-270deg);
 }
 
 .icon-twitter:hover {
@@ -185,16 +185,16 @@ a:hover {
 }
 
 .icon-facebook {
+  width: 50px;
+  background-image: url(images/facebook500.png);
+  height: 50px;
   position:absolute;
+  background-size: 100% auto;
   transition: .5s ease;
   opacity: .7;
-  top: 40%;
+  top: 30%;
   left: 60%;
-  transform: rotate(486deg) translate(5em) rotate(-486deg);
-
-  -moz-border-radius: 31px;
-  border-radius: 31px;
-  background-color: white;
+  transform: rotate(486deg) translate(4em) rotate(-486deg);
 }
 
 .icon-facebook:hover {
@@ -202,16 +202,16 @@ a:hover {
 }
 
 .icon-email {
+  width: 50px;
+  background-image: url(images/email.png);
+  height: 50px;
   position:absolute;
+  background-size: 100% auto;
   transition: .5s ease;
   opacity: .7;
-  top: 40%;
+  top: 30%;
   left: 60%;
-  transform: rotate(558deg) translate(5em) rotate(-558deg);
-
-  -moz-border-radius: 31px;
-  border-radius: 31px;
-  background-color: white;
+  transform: rotate(558deg) translate(4em) rotate(-558deg);
 }
 
 .icon-email:hover {
