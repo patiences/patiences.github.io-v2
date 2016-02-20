@@ -6,3 +6,9 @@ The typed text is taken from www.mattboldt.com. Pretty slick, huh?
 
 Please let me know if anything looks off in your browser/device of choice! 
 
+
+
+
+
+
+
