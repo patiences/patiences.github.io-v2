@@ -1,0 +1,44 @@
+a {
+ text-decoration: none !important;
+}
+a:link {
+  color: deeppink;
+}
+a:visited {
+    color: darkturquoise;
+}
+
+.hello {
+  font-family: 'Lobster', serif;
+  font-size: 5.5em;
+  color: #000;
+  display: inline;
+}
+
+.social {
+  display: inline;
+}
+
+.blurb {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5em;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+.navigation li{
+  font-size: 3.5em;
+}
+
+.navigation li a {
+  color: #000;
+  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.vertical-line {
+  border-left: medium solid #000;
+}
