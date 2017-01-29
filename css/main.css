@@ -15,6 +15,10 @@ a:visited {
   display: inline;
 }
 
+.hello > a {
+  color: #000;
+}
+
 .social {
   display: inline;
 }
@@ -41,4 +45,23 @@ ul {
 
 .vertical-line {
   border-left: medium solid #000;
+}
+
+.photo-wrapper {
+  display: inline-block;
+  overflow: auto;
+}
+
+img {
+  width: 90%;
+}
+
+.caption {
+  color: gray;
+  font-size: 0.8em;
+
+}
+
+h1 {
+  font-weight: bold;
 }
