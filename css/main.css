@@ -1,16 +1,18 @@
 a {
- text-decoration: none !important;
+  text-decoration: none !important;
 }
+
 a:link {
   color: deeppink;
 }
+
 a:visited {
     color: darkturquoise;
 }
 
 .hello {
   font-family: 'Lobster', serif;
-  font-size: 5.5em;
+  font-size: 7.5em;
   color: #000;
   display: inline;
 }
@@ -20,7 +22,10 @@ a:visited {
 }
 
 .social {
-  display: inline;
+  display: inline-block;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
 }
 
 .blurb {
@@ -31,6 +36,8 @@ a:visited {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation li{
@@ -62,6 +69,6 @@ img {
 
 }
 
-h1 {
-  font-weight: bold;
+.h1 {
+  font-weight: bold !important;
 }
