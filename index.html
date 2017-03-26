@@ -12,23 +12,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="icon" href="images/favicon-laptop.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  $(function(){
+    $("#header").load("header.html");
+  });
+  </script> 
 </head>
 <body>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12">
-        <br>
-        <h1 class="hello"><a href="index.html">hi, i'm patience!</a></h1>
-        <div class="social">
-          <a target="_blank" class="fa fa-github fa-fw fa-2x" href="http://github.com/patiences"></a>
-          <a target="_blank" class="fa fa-linkedin fa-fw fa-2x" href="http://linkedin.com/in/patienceshyu"></a>
-          <a class="fa fa-envelope-o fa-fw fa-2x" href="mailto:patienceshyu@gmail.com"></a>
-          <a target="_blank" class="fa fa-facebook fa-fw fa-2x" href="https://www.facebook.com/patienceshyu"></a>
-          <a target="_blank" class="fa fa-instagram fa-fw fa-2x" href="https://www.instagram.com/patienceshyu"></a>
-          <a target="_blank" class="fa fa-twitter fa-fw fa-2x" href="https://www.twitter.com/patienceshyu"></a>
-        </div>
-      </div>
-    </div>
+    <div id="header"></div>
     <div class="row"><br></div>
     <div class="row">
       <nav class="col-sm-2 navbar">
