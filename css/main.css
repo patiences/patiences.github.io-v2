@@ -107,3 +107,7 @@ img {
   border-radius: .25em;
   float: right;
 }
+
+#upcoming {
+  color: #DA70D6;
+}
