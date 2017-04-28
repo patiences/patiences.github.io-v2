@@ -1,4 +1,4 @@
-html {
+body {
   /* Hide everything until the page is fully loaded */
   visibility:hidden;
 }
@@ -116,4 +116,9 @@ img {
 
 #upcoming {
   color: #DA70D6;
+}
+
+@media all and (max-width: 500px) {
+    /* Don't border if viewport is small */
+    .vertical-line { border: none; }
 }
