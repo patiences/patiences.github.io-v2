@@ -3,7 +3,6 @@ body {
   visibility:hidden;
 }
 
-
 a {
   text-decoration: none !important;
 }
@@ -31,7 +30,6 @@ a:visited {
   display: inline-block;
   padding-top: 2em;
   padding-bottom: 2em;
-
 }
 
 .blurb {
@@ -118,7 +116,9 @@ img {
   color: #DA70D6;
 }
 
-@media all and (max-width: 500px) {
-    /* Don't border if viewport is small */
-    .vertical-line { border: none; }
+@media all and (max-width: 1200px) {
+    /* Don't border if viewport is small and the nav bar and body are stacked (max-width is based on viewport of large devices) */
+    .vertical-line {
+      border-left: none;
+    }
 }
