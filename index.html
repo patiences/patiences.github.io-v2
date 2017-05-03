@@ -32,20 +32,34 @@
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script>
-  $(function(){
-    $("#header").load("header");
-    $("#navbar").load("navbar");
-  });
-  </script>
 </head>
 
 <body>
   <div class="container-fluid">
-    <div id="header"></div>
+    <div class="row">
+      <div class="col-xs-12">
+        <br>
+        <h1 class="hello"><a href="/">hi, i'm patience!</a></h1>
+        <div class="social">
+          <a target="_blank" class="fa fa-github fa-fw fa-2x" href="http://github.com/patiences"></a>
+          <a target="_blank" class="fa fa-linkedin fa-fw fa-2x" href="http://linkedin.com/in/patienceshyu"></a>
+          <a class="fa fa-envelope-o fa-fw fa-2x" href="mailto:patienceshyu@gmail.com"></a>
+          <a target="_blank" class="fa fa-facebook fa-fw fa-2x" href="https://www.facebook.com/patienceshyu"></a>
+          <a target="_blank" class="fa fa-instagram fa-fw fa-2x" href="https://www.instagram.com/patienceshyu"></a>
+          <a target="_blank" class="fa fa-twitter fa-fw fa-2x" href="https://www.twitter.com/patienceshyu"></a>
+        </div>
+      </div>
+    </div>
     <div class="row"><br></div>
     <div class="row">
-      <div id="navbar"></div>
+      <nav class="col-lg-2 navbar">
+          <ul class="navigation">
+            <li><a href="about">about<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></span></a></li>
+            <li><a href="bookshelf">bookshelf<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></span></a></li>
+            <li><a href="https://medium.com/@patiences">blog<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></a></li>
+            <li><a href="/resume/PatienceShyu.pdf">resume<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></a></li>
+          </ul>
+      </nav>
       <div class="blurb col-lg-9 vertical-line">
           <p>
           I'm a computer science student at the <a target="_blank" href="https://www.cs.ubc.ca/">University of British Columbia</a>
@@ -87,7 +101,6 @@
           </ul>
           <label for="post-2" class="read-more-trigger"></label>
           <br>
-          <br>
           <p>
             Wanna chat about my work, or share <a target="_blank" href="http://abc.go.com/shows/the-chew/recipes/mario-batali-eggs-hell">an awesome recipe</a>? Please drop me a line via any of my online profiles.
           </p>
@@ -95,8 +108,5 @@
     </div>
     <div class="row"><br></div>
   </div>
-  <script>
-  $().ready(function(){ $("body").css({visibility:'visible'})});
-  </script>
 </body>
 </html>

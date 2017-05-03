@@ -1,8 +1,3 @@
-body {
-  /* Hide everything until the page is fully loaded */
-  visibility:hidden;
-}
-
 a {
   text-decoration: none !important;
 }
