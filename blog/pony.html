@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patience Shyu</title>
+  <meta name="description" content="Patience Shyu"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Cormorant+Garamond" rel="stylesheet">
+  <link href="../css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="icon" href="../images/favicon-laptop.ico">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <br>
+        <h1 class="hello"><a href="/">hi, i'm patience!</a></h1>
+        <div class="social">
+          <a target="_blank" class="fa fa-github fa-fw fa-2x" href="http://github.com/patiences"></a>
+          <a target="_blank" class="fa fa-linkedin fa-fw fa-2x" href="http://linkedin.com/in/patienceshyu"></a>
+          <a class="fa fa-envelope-o fa-fw fa-2x" href="mailto:patienceshyu@gmail.com"></a>
+          <a target="_blank" class="fa fa-facebook fa-fw fa-2x" href="https://www.facebook.com/patienceshyu"></a>
+          <a target="_blank" class="fa fa-instagram fa-fw fa-2x" href="https://www.instagram.com/patienceshyu"></a>
+          <a target="_blank" class="fa fa-twitter fa-fw fa-2x" href="https://www.twitter.com/patienceshyu"></a>
+          <a target="_blank" class="fa fa-medium fa-fw fa-2x" href="https://medium.com/@patiences"></a>
+        </div>
+      </div>
+    </div>
+    <div class="row"><br></div>
+    <div class="row">
+      <nav class="col-lg-2 navbar">
+          <ul class="navigation">
+            <li><a href="about">about<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></span></a></li>
+            <li><a href="bookshelf">bookshelf<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></span></a></li>
+            <li><a href="/listing">blog<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></a></li>
+            <li><a href="/resume/PatienceShyu.pdf">resume<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></a></li>
+          </ul>
+      </nav>
+      <div class="blurb col-lg-9 vertical-line">
+        <div>
+          <p class="small text-muted">May 30th, 2017</p>
+          <h1><b>What I Learned at Summer School</b></h1>
+          <p>
+            I spent the past week at the <a href="https://pliss2017.github.io/">Programming Language Implementation Summer School</a>
+            in Bertinoro, Italy. Throughout my undergrad I've avoided taking classes in the summer but when Ron told me about
+            this one in Italy I couldn't not apply. Now that the week is over and I'm sunning it up in Croatia, I want to write a few
+            blog posts about some stuff I learned both in and out of the classroom.
+          </p>
+          <div class="photo-wrapper">
+              <img style="height: 400px; width: 600px;" src="../images/pliss-classroom.jpg"></img>
+          </div>
+          <div class="caption">
+            The amazing classroom.
+          </div>
+          <h1><b>Part 1: Worry-free Concurrent Programming in Pony</b></h1>
+          <p>
+            Writing concurrent programs is hard. At the heart of the challenge is handing shared data —
+            and to that, our intro to computer science professors say: put a lock on it!
+            But programming with locks and semaphores is very difficult to get right and is torturously slow
+            (imagine Facebook locking each of Donald Trump’s posts when someone comments).
+            The <a href="https://www.ponylang.org/">Pony</a> language, being developed at <a href="https://wp.doc.ic.ac.uk/sd/">Sophia Drossopoulou</a>’s
+            group at Imperial College London, introduces two core ideas such that, if you can get your program to compile,
+            guarantees memory safety (among other things).
+          </p>
+          <h2><b>The Actor Model</b></h2>
+          <p>
+            The first of these is the actor model. This isn’t really a new idea — probably the best known language that uses this is Erlang.
+            Instead of the traditional threads, we have actors, and they define the concurrent system.
+            Each actor does its own computation, receives messages, and sends messages to other actors.
+            The actor executes each message in its entirety and sequentially.
+            So the concurrency happens when you have multiple actors, each doing their own thing.
+          </p>
+          <p>
+            To me this is a very intuitive model to think about parallel work. Suppose I want to ask a bunch of people to do my homework.
+            I’d probably make photocopies to distribute to each of my minions, and they’ll each work on an assigned question,
+            and send it back to me when they’re done. Notice that while they’re doing the work,
+            each one has its own copy — there is no passing around one homework a la Sisterhood of the Traveling Pants.
+            In the actor model, each actor always has its own private state.
+          </p>
+          <h2><b>Reference Capabilities</b></h2>
+          <p>
+            But this is not still not enough, because we need to define the rules around shared data.
+            Pony’s solution to this is reference capabilities: an extra tag that you write with the type
+            (Pony is strongly typed) for each variable that tells you how that variable can be used.
+            There are <a href="https://tutorial.ponylang.org/capabilities/reference-capabilities.html">6 of these</a>,
+            from <i>iso</i> and <i>val</i> (isolated, as in no other variables can access the data, and immutable, respectively)
+            to <i>ref</i> and <i>box</i> (mutable and read-only, respectively).
+          </p>
+          <p>
+            Confused? I am. From a theoretical perspective, ref capabilities are absolutely beautiful.
+            But for an engineer who just wanted to hit the ground running, the powerful type system was,
+            at first, a bit off-putting. I’m used to writing programs that compile with little effort
+            (usually because the problem is hiding somewhere where it’s hard to diagnose and hard to debug).
+          </p>
+          <h2><b>Tada…</b></h2>
+          <p>This combination gets us some very nice (and interesting) guarantees.</p>
+          <p>
+          <ol>
+            <li>
+              No data races. If an actor sees some object as writeable (iso or ref) then all other actors see
+              the object as unreadable and unwritable (tag).
+            </li>
+            <li>
+              Immutability is deep and permanent. If an actor sees some object as immutable (val),
+              its contents are also immutable.
+            </li>
+            <li>
+              Atomicity. We can trace what happened when without too much difficulty.
+              If an actor <i>a</i> at some point <i>C</i> sees an object <i>o</i> with a non-tag capability
+              (so <i>a</i> can actually do something with <i>o</i>) without message receipts, and <i>o</i> is different
+              at some earlier point, then <i>a</i> did it: <i>a</i> must have either created or modified <i>o</i>.
+            </li>
+            <li>
+              Lots more <a href="https://tutorial.ponylang.org/capabilities/guarantees.html">here</a>...
+            </li>
+          </ol>
+          <h2><b>What about Rust? Why not Rust?</b></h2>
+          <p>
+            Idiomatically I think Rust and Pony are approaches to memory safety from two very different angles.
+            Pony’s core focus is safe concurrency, and with the actor model you have to think in a totally
+            different way even when you’re writing a sequential program (though who ever did anything
+            interesting with a sequential program?), whereas Rust is more familiar for those of us coming
+            from the C world — except with mutability requirements and restrictions on the shared data.
+          </p>
+          <p>
+            One advantage that Pony has over Rust is creating and manipulating cyclic data structures.
+            Cyclic data structures are nontrivial in Rust, partly because of the mutability qualifiers
+            (I mean check out this implementation of <a href="https://github.com/nrc/r4cppp/tree/master/graphs">graphs</a>).
+            According to Sophia, it’s much more painless in Pony (need to try this for myself though).
+          </p>
+          <h2><b>Borrowing?</b></h2>
+          <p>
+            There isn’t really a concept of borrowing yet, although I think you can fake it with by
+            <a href="https://tutorial.ponylang.org/capabilities/recovering-capabilities.html">recovering capabilities</a>
+            (essentially change the capability so the variable can be passed to another actor).
+            It’s next on their to-do list, though!
+          </p>
+          <h2><b>How usable is it, really?<b></h2>
+          <p>
+            I think there’s a trend in recent years for languages to have as little learning curve as possible.
+            It seems like languages that are a bit prickly at first (because of the type system or otherwise)
+            haven’t gained much traction. On the other hand, dynamic languages like Python and Ruby are still going strong.
+            Rust, for example, started off with a lot more structure baked into the language and spent years simplifying and
+            pushing abstractions into libraries (see <a href="https://doc.rust-lang.org/std/cell/">Cells</a> and
+            <a href="https://doc.rust-lang.org/std/cell/struct.RefCell.html">RefCells</a> for example) to make it more accessible.
+            The Pony developers don't currently have any plans to water down their type system (I asked :-) ).
+          </p>
+          <p>
+            Last week, I was definitely on the Python train… now I’m not so sure.
+            What would it take for the masses to adopt a language like Pony?
+            I’d much rather debug a compile error with a nice message than a deadlock…
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
