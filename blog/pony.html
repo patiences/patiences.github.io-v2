@@ -55,8 +55,8 @@
           </div>
           <h1><b>Part 1: Worry-free Concurrent Programming in Pony</b></h1>
           <p>
-            Writing concurrent programs is hard. At the heart of the challenge is handing shared data —
-            and to that, our intro to computer science professors say: put a lock on it!
+            Writing concurrent programs is hard. At the heart of the challenge is handling shared data —
+            and to that, our Intro to Computer Science professors say: put a lock on it!
             But programming with locks and semaphores is very difficult to get right and is torturously slow
             (imagine Facebook locking each of Donald Trump’s posts when someone comments).
             The <a href="https://www.ponylang.org/">Pony</a> language, being developed at <a href="https://wp.doc.ic.ac.uk/sd/">Sophia Drossopoulou</a>’s
@@ -91,18 +91,18 @@
             Confused? I am. From a theoretical perspective, ref capabilities are absolutely beautiful.
             But for an engineer who just wanted to hit the ground running, the powerful type system was,
             at first, a bit off-putting. I’m used to writing programs that compile with little effort
-            (usually because the problem is hiding somewhere where it’s hard to diagnose and hard to debug).
+            (usually because the problems are hiding somewhere where it’s hard to diagnose and hard to debug).
           </p>
           <h2><b>Tada…</b></h2>
           <p>This combination gets us some very nice (and interesting) guarantees.</p>
           <p>
           <ol>
             <li>
-              No data races. If an actor sees some object as writeable (iso or ref) then all other actors see
-              the object as unreadable and unwritable (tag).
+              No data races. If an actor sees some object as writeable (<i>iso</i> or <i>ref</i>) then all other actors see
+              the object as unreadable and unwritable (<i>tag</i>).
             </li>
             <li>
-              Immutability is deep and permanent. If an actor sees some object as immutable (val),
+              Immutability is deep and permanent. If an actor sees some object as immutable (<i>val</i>),
               its contents are also immutable.
             </li>
             <li>
@@ -132,14 +132,14 @@
           </p>
           <h2><b>Borrowing?</b></h2>
           <p>
-            There isn’t really a concept of borrowing yet, although I think you can fake it with by
+            There isn’t really a concept of borrowing yet, although I think you can fake it by
             <a href="https://tutorial.ponylang.org/capabilities/recovering-capabilities.html">recovering capabilities</a>
-            (essentially change the capability so the variable can be passed to another actor).
+            (essentially change the capability so the variable can be passed to and changed by another actor).
             It’s next on their to-do list, though!
           </p>
-          <h2><b>How usable is it, really?<b></h2>
+          <h2><b>How usable is it, really?</b></h2>
           <p>
-            I think there’s a trend in recent years for languages to have as little learning curve as possible.
+            I think there’s a trend in recent years towards languages that have as flat a learning curve as possible.
             It seems like languages that are a bit prickly at first (because of the type system or otherwise)
             haven’t gained much traction. On the other hand, dynamic languages like Python and Ruby are still going strong.
             Rust, for example, started off with a lot more structure baked into the language and spent years simplifying and
@@ -157,7 +157,7 @@
           </p>
           <p>
             I’d personally much rather debug a compile error with a nice message than a deadlock,
-            but it's about getting out of the mindset that the compilation step is trivial.
+            but first it's about getting out of the mindset that the compilation step is trivial.
           </p>
           <br>
         </div>
