@@ -120,11 +120,12 @@
           </ol>
           <h2><b>What about Rust? Why not Rust?</b></h2>
           <p>
-            Idiomatically I think Rust and Pony are approaches to memory safety from two very different angles.
-            Pony’s core focus is safe concurrency, and with the actor model you have to think in a totally
+            Idiomatically I think Rust's and Pony's approaches to memory safety aren't so different -- capabilities
+            can capture a bit more information than mutabilities, but essentially they are just about annotating data with
+            restrictions. However, Pony’s core focus is safe concurrency, and with the actor model you have to think in a totally
             different way even when you’re writing a sequential program (though who ever did anything
             interesting with a sequential program?), whereas Rust is more familiar for those of us coming
-            from the C world — except with mutability requirements and restrictions on the shared data.
+            from the C world.
           </p>
           <p>
             One advantage that Pony has over Rust is creating and manipulating cyclic data structures.
@@ -152,7 +153,10 @@
           <p>
             Last week, I was definitely on the Python train… now I’m not so sure.
             What would it take for the masses to adopt a language like Pony?
-            I’d much rather debug a compile error with a nice message than a deadlock…
+            Can we convince the programming community to have enough patience to handle compiler errors if it means
+            we have fewer of those seriously painful concurrency bugs later down the line?
+            I’d personally much rather debug a compile error with a nice message than a deadlock,
+            but it's about getting out of the mindset that the compilation step is trivial.
           </p>
           <br>
         </div>
