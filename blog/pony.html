@@ -145,7 +145,7 @@
             Rust, for example, started off with a lot more structure baked into the language and spent years simplifying and
             pushing abstractions into libraries (see <a href="https://doc.rust-lang.org/std/cell/">Cells</a> and
             <a href="https://doc.rust-lang.org/std/cell/struct.RefCell.html">RefCells</a> for example) to make it more accessible.
-            The Pony developers don't currently have any plans to water down their type system (I asked :-) ).
+            The Pony developers don't currently anticipate having to water down their type system (I asked :-) ).
           </p>
           <p>
             Last week, I was definitely on the Python train… now I’m not so sure.
@@ -160,6 +160,42 @@
             but first it's about getting out of the mindset that the compilation step is trivial.
           </p>
           <br>
+          <p>
+            <span class="text-muted">06-01-2017 </span>
+            <b>EDIT:</b> After chatting about this more with Paley, I think we've managed to nail down the pros and cons
+            of the actor model + reference capabilities system, in addition to the technical benefits mentioned above.
+          </p>
+          <h3><b>PROS</b></h3>
+          <ul>
+            <li>
+            <b><i>Explicitness.</i></b> With reference capabilities, you must write down exactly what you are doing and what you will be doing
+            with each variable.
+          </li>
+          <li>
+            <b><i>Readability.</i></b> This goes hand in hand with explicitness, because capabilities are essentially written intentions.
+            When you come back months later to read the code, hopefully it'll be easier to understand what you were thinking at the time.
+          </li>
+          <li>
+            <b><i>Programming with concurrency in mind.</i></b> This model makes you constantly aware that the code is meant to be executed concurrently.
+            Although that is a lot to keep in your head at once, it forces you to always be thinking about resource and memory management.
+          </li>
+          </ul>
+          <h3><b>CONS</b></h3>
+          <ul>
+            <li>
+            <b><i>Coupling between the "concurrency" stuff and the "regular" stuff.</i></b> In the traditional multi-threaded paradigm, the concurrency and
+            parallelization bits are somewhat localized to the thread management code, but we lose this separation of concerns here.
+            </li>
+            <li>
+            <b><i>Fighting with the compiler.</i></b> This is inevitable and it can take a time before the error messages are more useful than annoying. Pony
+            (or any language with a complicated type system) does not enable fast prototyping. But maybe changing capabilities to satisfy the
+            compiler is not so different from putting * and & everywhere until g++ is happy?
+            </li>
+            <li>
+            <b><i>Unreadability.</i></b> Yes, I know I put this as a pro too. Capabilities clutter up the code when you're just trying to get a sense of what
+            the program is doing and don't care about the nitty-gritty details.
+            </li>
+          </ul>
         </div>
       </div>
     </div>
