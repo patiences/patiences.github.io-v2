@@ -42,7 +42,7 @@
           <p class="small text-muted">May 30th, 2017</p>
           <h1><b>What I Learned at Summer School</b></h1>
           <p>
-            I spent the past week at the <a href="https://pliss2017.github.io/">Programming Language Implementation Summer School</a>
+            I spent the past week at the <a href="https://pliss2017.github.io/" target="_blank">Programming Language Implementation Summer School</a>
             in Bertinoro, Italy. Throughout my undergrad I've avoided taking classes in the summer but when Ron told me about
             this one in Italy I couldn't not apply. Now that the week is over and I'm sunning it up in Croatia, I want to write a few
             blog posts about some stuff I learned both in and out of the classroom.
@@ -59,7 +59,7 @@
             and to that, our Intro to Computer Science professors say: put a lock on it!
             But programming with locks and semaphores is very difficult to get right and is torturously slow
             (imagine Facebook locking each of Donald Trump’s posts when someone comments).
-            The <a href="https://www.ponylang.org/">Pony</a> language, being developed at <a href="https://wp.doc.ic.ac.uk/sd/">Sophia Drossopoulou</a>’s
+            The <a href="https://www.ponylang.org/" target="_blank">Pony</a> language, being developed at <a href="https://wp.doc.ic.ac.uk/sd/" target="_blank">Sophia Drossopoulou</a>’s
             group at Imperial College London, introduces two core ideas such that, if you can get your program to compile,
             guarantees memory safety (among other things).
           </p>
@@ -83,7 +83,7 @@
             But this is not still not enough, because we need to define the rules around shared data.
             Pony’s solution to this is reference capabilities: an extra tag that you write with the type
             (Pony is strongly typed) for each variable that tells you how that variable can be used.
-            There are <a href="https://tutorial.ponylang.org/capabilities/reference-capabilities.html">6 of these</a>,
+            There are <a href="https://tutorial.ponylang.org/capabilities/reference-capabilities.html" target="_blank">6 of these</a>,
             from <i>iso</i> and <i>val</i> (isolated, as in no other variables can access the data, and immutable, respectively)
             to <i>ref</i> and <i>box</i> (mutable and read-only, respectively).
           </p>
@@ -112,7 +112,7 @@
               at some earlier point, then <i>a</i> did it: <i>a</i> must have either created or modified <i>o</i>.
             </li>
             <li>
-              Lots more <a href="https://tutorial.ponylang.org/capabilities/guarantees.html">here</a>...
+              Lots more <a href="https://tutorial.ponylang.org/capabilities/guarantees.html" target="_blank">here</a>...
             </li>
           </ol>
           <h2><b>What about Rust? Why not Rust?</b></h2>
@@ -127,13 +127,13 @@
           <p>
             One advantage that Pony has over Rust is creating and manipulating cyclic data structures.
             Cyclic data structures are nontrivial in Rust, partly because of the mutability qualifiers
-            (I mean check out this implementation of <a href="https://github.com/nrc/r4cppp/tree/master/graphs">graphs</a>).
+            (I mean check out this implementation of <a href="https://github.com/nrc/r4cppp/tree/master/graphs" target="_blank">graphs</a>).
             According to Sophia, it’s much more painless in Pony (need to try this for myself though).
           </p>
           <h2><b>Borrowing?</b></h2>
           <p>
             There isn’t really a concept of borrowing yet, although I think you can fake it by
-            <a href="https://tutorial.ponylang.org/capabilities/recovering-capabilities.html">recovering capabilities</a>
+            <a href="https://tutorial.ponylang.org/capabilities/recovering-capabilities.html" target="_blank">recovering capabilities</a>
             (essentially change the capability so the variable can be passed to and changed by another actor).
             It’s next on their to-do list, though!
           </p>
@@ -162,7 +162,7 @@
           <br>
           <p>
             <span class="text-muted">06-01-2017 </span>
-            <b>EDIT:</b> After chatting about this more with Paley, I think we've managed to nail down the pros and cons
+            <b>EDIT:</b> After chatting about this more with <a href="http://palez.github.io/" target="_blank">Paley</a>, I think we've managed to nail down the pros and cons
             of the actor model + reference capabilities system, in addition to the technical benefits mentioned above.
           </p>
           <h3><b>PROS</b></h3>
