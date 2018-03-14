@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Patience Shyu</title>
+  <meta name="description" content="Patience Shyu"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Cormorant+Garamond" rel="stylesheet">
+  <link href="../css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="icon" href="../images/favicon-laptop.ico">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <br>
+        <h1 class="hello"><a href="/">hi, i'm patience!</a></h1>
+        <div class="social">
+          <a target="_blank" class="fa fa-github fa-fw fa-2x" href="http://github.com/patiences"></a>
+          <a target="_blank" class="fa fa-linkedin fa-fw fa-2x" href="http://linkedin.com/in/patienceshyu"></a>
+          <a target="_blank" class="fa fa-medium fa-fw fa-2x" href="https://medium.com/@patiences"></a>
+          <a class="fa fa-envelope-o fa-fw fa-2x" href="mailto:patienceshyu@gmail.com"></a>
+        </div>
+      </div>
+    </div>
+    <div class="row"><br></div>
+    <div class="row">
+      <nav class="col-lg-2 navbar">
+          <ul class="navigation">
+            <li><a href="/about">about<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></span></a></li>
+            <li><a href="/blog/listing">blog<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></a></li>
+            <li><a href="/resume/PatienceShyu.pdf">resume<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></a></li>
+          </ul>
+      </nav>
+      <div class="blurb col-lg-9 vertical-line">
+        <div>
+          <p class="small text-muted">March 14th, 2018</p>
+          <h1><b>First Foray into Open Source, or <p>How to Contribute to Open Source for the First Time</p></b></h1>
+          <p>
+            People have been telling me to contribute to open source for years: in the same breath as they're recommending building a
+            personal website (check), working on personal projects (check) -- you know, all the stuff you're supposed to do as a fresh-faced
+            cs student looking for a development job. For me, open source was the most intimidating of the three. Personal projects hide
+            spaghetti code, files that don't compile, a tumultuous git history... things that we students maybe shouldn't advertise, in hindsight.
+          </p>
+          <p>
+            But open source? That always felt way out of reach, even with development experience under my belt. I remember feeling
+            overwhelmed just trying to pick a project.
+          </p>
+          <div class="photo-wrapper">
+              <img style="height: 400px; width: 715px;" src="../images/github-os.jpg"></img>
+          </div>
+          <div class="caption">
+            Millions?!! Screenshot taken from github.com/open-source
+          </div>
+          <br>
+          <p>
+            This spring I am applying to be a <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> student. If you're not
+            familiar with the program, GSoC is essentially a remote, self-directed summer internship program that lets you work for and be
+            mentored by an approved open source organization. Whether or not you're applying for GSoC, I think the list of
+            <a href="https://summerofcode.withgoogle.com/organizations/">approved organizations</a> is a great (not so) shortlist of
+            awesome open source projects that are a) looking for contributors and b) open to mentoring newcomers.
+          </p>
+          <p>
+            So, since I've spent the past month getting my hands dirty with various open source projects,
+            here are a few things I've learned so far.
+          </p>
+          <h2><b>Required Skills To Contribute To Open Source</b></h2>
+          <ul>
+            <li>A little bit of git</li>
+            <li>A little bit of some programming language*</li>
+          </ul>
+          <div style="font-size: 0.8em">
+            * Not strictly necessary, there is always documentation that needs to be written or other non-programming tasks, which can be a good place to start!
+          </div>
+          <div></div>
+          <p></p>
+          <p>
+            That's it! Contrary to my former beliefs, you don't need to be a master of Ruby or already know all the features of Django
+            to contribute to a well-known project. Even through the process of installing and trying out the software for the first time
+            you may end up submitting a bug report, which is extremely valuable.
+          </p>
+          <h2><b>A Step-By-Step Guide</b></h2>
+          <p>
+            Here's my current approach for getting acquainted with a new open source project:
+            <ol>
+              <li><b><i>Check that I am somewhat familiar with at least one of the languages/frameworks being used.</i></b> If I didn't know enough of the technical
+              stuff, I'd probably pick up a documentation task while I learned the language(s) on my own.
+              </li>
+              <li><b><i>Find out where the contributors hang out.</i></b> There's usually a mailing list, <a href="https://gitter.im">gitter room</a>,
+                or some other forum-type place to ask questions about the codebase. Unfortunately many orgs still use
+                <a href="https://en.wikipedia.org/wiki/Internet_Relay_Chat">irc</a>, which is not very nice to navigate (I still can't get used to it).
+              </li>
+              <li><b><i>Find a beginner's task.</i></b> Check out their open issues to see what bugs they need fixed or features they need implemented.
+                Many projects have issue tags like <em>low-hanging-fruit</em> or <em>good-first-issue</em>, which are easy-ish tasks reserved for newcomers.
+                Drop a comment on the issue to make sure no one else is actively working on it, and then it's yours!
+              </li>
+              <li><b><i>Ask questions about the problem.</b></i> It's perfectly fine to ask for specific guidance, especially on a first issue, and
+                it saves you time as well as the developer who might end up reviewing a misinformed PR.
+              </li>
+              <li><b><i>Submit your first pull request.</b></i> Fork the repository and create a new, aptly-named branch for each issue that you work on. This way,
+                you can submit PRs for multiple issues at a time (I learned this the hard way).
+              </li>
+              <li><b><i>Respond to feedback.</b></i> It's normal for a first timer to require many iterations of changes (no shame in that).
+                Some organizations will ask you to squash or rebase commits, which is a good git exercise in itself. Remember that much open source
+                development is voluntary work, so be patient if you don't get feedback immediately.
+              </li>
+              <li><b><i>Merge your first contribution!</b></i> High five.
+              </li>
+            </ol>
+          </p>
+          <h2><b>Project Spotlight</b></h2>
+          <p>Some super cool open source projects I've tested out in the past few weeks!
+            <h2><em><a href="https://pybee.org/">BeeWare</a></em></h2>
+            <div class="photo-wrapper">
+                <img style="height: 175px; width: 175px;" src="../images/beeware-logo.png"></img>
+            </div>
+            <p>
+              BeeWare is collection of projects with the goal of making it easy to write native apps in Python.
+              Surprised? I was too -- Python is not the language that comes to mind when I think of app development.
+              But there's no reason why the awesomeness of Python can't be leveraged to build apps. BeeWare currently
+              consists of <a href="https://pybee.org/project/projects/bridges/rubicon/">bridge libraries</a> that
+              connect Python and Objective-C for iOS development, a <a href="https://pybee.org/project/projects/bridges/voc/">transpiler</a>
+              that translates Python bytecode into Java bytecode for Android development, a
+              <a href="https://pybee.org/project/projects/libraries/toga/">toolkit</a> that abstracts away the
+              differences between the two platforms for seamless cross-platform development, and many more
+              <a href="https://pybee.org/project/projects/">exciting projects</a>! Everything's still in early development,
+              and they're are seeking active contributors!
+            </p>
+            <h2><em><a href="https://checkerframework.org/">Checker Framework</a></em></h2>
+            <div class="photo-wrapper">
+                <img style="height: 75px; width: 250px;" src="../images/checker-logo.png"></img>
+            </div>
+            <p>Love typechecking? The Checker Framework is a project that came from academia that lets you add specific,
+              targeted typechecking to your Java programs. Their typecheckers can catch traditionally runtime errors at
+              compile time -- errors such as null pointer exceptions, array indexing errors... You plug in a typechecker,
+              compile a seemingly functioning Java program and find a bunch of potentially erroneous code. To get rid of the
+              errors, type annotations are used to specify additional type information, or if it's a real bug, the code should
+              be fixed. The Checkers are easily integrated into Eclipse, and though there are many typecheckers already written
+              and ready to inspect your programs, they are looking for people to write more.
+            </p>
+            <h2><em><a href="https://pybee.org/">Scrapy</a></em></h2>
+            <div class="photo-wrapper">
+                <img style="height: 100px; width: 300px;" src="../images/scrapy-logo.png"></img>
+            </div>
+            <p>
+              If you've heard of Scrapy before, no surprise there -- it's probably the most widely used open source web
+              scraping framework out there. Web scraping is about navigating to a webpage and fetching specific data from
+              it. Scrapy is a mature, well-maintained project with many core developers that have been around a long time
+              and are still actively contributing. They currently have lots of interesting problems resulting from supporting
+              various kinds of use cases and maintaining backwards-compatibility while integrating with new Python features
+              (at the time of writing, async/await syntax support is an example).
+            </p>
+
+            <h2><b>Two More Cents</b></h2>
+            <p>
+              Contributing to open source can help you develop skills that you learn in industry, like how to write a good bug
+              report, respond to code reviews, and communicate with other developers effectively -- and I argue, even more so
+              because you're working with people from all backgrounds from all over the world.
+              I only wish somebody had handed me something like this two years ago when I was browsing trending repositories dejectedly.
+              Maybe I would have gotten started earlier.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
