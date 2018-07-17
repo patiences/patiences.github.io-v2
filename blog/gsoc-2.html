@@ -66,7 +66,7 @@
               22: INVOKEINTERFACE org/python/Object.__getitem__ (Lorg/python/Object;)Lorg/python/Object; // Get the current module
               30: ALOAD_1 // Get the local variable at position 1
               31: LDC_W (String 'x')
-              35: INVOKEINTERFACE org/python/Object.__setattr__ (Ljava/lang/String;Lorg/python/Object;)V // Set x = 42 in the current module
+              35: INVOKEINTERFACE org/python/Object.__setattr__ (Ljava/lang/String;Lorg/python/Object;)V // Set x = 42
 
               // print(x)
               40: GETSTATIC python/sys.modules (Lorg/python/types/Dict;) // Get the dictionary of all modules
@@ -75,7 +75,7 @@
               50: INVOKESPECIAL org/python/types/Str.init (Ljava/lang/String;)V
               53: INVOKEINTERFACE org/python/Object.__getitem__ (Lorg/python/Object;)Lorg/python/Object; // Get the current module
               61: LDC_W (String 'print')
-              64: INVOKEINTERFACE org/python/Object.__getattribute__ (Ljava/lang/String;)Lorg/python/Object; // Get the value of print
+              64: INVOKEINTERFACE org/python/Object.__getattribute__ (Ljava/lang/String;)Lorg/python/Object; // Get value of print
               69: CHECKCAST (Class org/python/Callable) // Cast it to a Callable (something that can be invoked)
               78: GETSTATIC python/sys.modules (Lorg/python/types/Dict;) // Get the dictionary of all modules
               81: NEW org/python/types/Str // 81-88 creates a string for the module name, example
@@ -86,8 +86,8 @@
               102: INVOKEINTERFACE org/python/Object.__getattribute__ (Ljava/lang/String;)Lorg/python/Object; // Get the value of x
               115: INVOKEINTERFACE org/python/Callable.invoke ([Lorg/python/Object;Ljava/util/Map;)Lorg/python/Object; // invoke print(x)
             </code></pre>
-            There is *a lot* of repetition here. In fact, the current module <code>example></code> is retrieved exactly 3 times: first
-            to store into <code>x</code> (9-22), then to look up <code>print</code> (40-53), and finally to look up <code>x<code> (78-91).
+            There is *a lot* of repetition here. In fact, the current module <code>example</code> is retrieved exactly 3 times: first
+            to store into <code>x</code> (9-22), then to look up <code>print</code> (40-53), and finally to look up <code>x</code> (78-91).
             If we were to stick this code in a loop running 1000 times, then the module would be loaded at least 1000 * 3 times (more in practice,
             because there are some new variables introduced in the loop). That's not incredibly efficient.
           </p>
@@ -119,12 +119,12 @@
               33: ALOAD_1 // Load the current module
               34: ALOAD_2 // Load x
               35: LDC_W (String 'x')
-              39: INVOKEINTERFACE org/python/Object.__setattr__ (Ljava/lang/String;Lorg/python/Object;)V // Set x = 42 in the current module
+              39: INVOKEINTERFACE org/python/Object.__setattr__ (Ljava/lang/String;Lorg/python/Object;)V // Set x = 42
 
               // print(x)
               44: ALOAD_1 // Load the current module
               45: LDC_W (String 'print')
-              48: INVOKEINTERFACE org/python/Object.__getattribute__ (Ljava/lang/String;)Lorg/python/Object; // Get the value of print
+              48: INVOKEINTERFACE org/python/Object.__getattribute__ (Ljava/lang/String;)Lorg/python/Object; // Get value of print
               53: CHECKCAST (Class org/python/Callable) // Cast it to a Callable
               62: ALOAD_1 // Load the current module
               63: LDC_W (String 'x')
@@ -134,6 +134,9 @@
             Much better! On various <a href="https://github.com/pybee/voc/pull/839/files#diff-76c95e069000c65f3a49f9984e93fde6">benchmark tests</a>
             this results in a 25-40% performance improvement.
           </p>
+          <hr>
+          <p>
+              You can follow the discussion and progression around this work <a href="https://github.com/pybee/voc/pull/839">here</a>.
         </div>
       </div>
     </div>
