@@ -134,6 +134,14 @@
             Much better! On various <a href="https://github.com/pybee/voc/pull/839/files#diff-76c95e069000c65f3a49f9984e93fde6">benchmark tests</a>
             this results in a 25-40% performance improvement.
           </p>
+          <h2><b>Generator Functions: A Special Case</b></h2>
+          <p>
+            One place where this optimization is not performed is in the case of the generator function. Since generators are iterators
+            that can be paused and resumed, the way that they are implemented in VOC is that the generator's state is kept around in a wrapper
+            around the actual function. On <code>yield</code>, the generator's state is saved in this object, and on resume, the local variables
+            are reloaded. This means that the current module would also have to be saved and reloaded on each execution stop and start. In this
+            case, it's cleaner to do it on demand rather than carry around two types of local variables.
+          </p>
           <hr>
           <p>
               You can follow the discussion and progression around this work <a href="https://github.com/pybee/voc/pull/839">here</a>.
