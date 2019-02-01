@@ -32,13 +32,38 @@
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/textures@1.2.0/dist/textures.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 
 <body>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12">
-        <br>
+    <div id="example" class="background"></div>
+
+    <script>
+      var svg = d3.select("#example").append("svg");
+      var t1 = textures.paths().d("crosses").lighter().fill("mediumorchid").background("lightskyblue");
+      var t2 = textures.circles().thicker().fill("gold").background("crimson");
+
+      svg.call(t1);
+      svg.call(t2);
+      svg.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("height", screen.height)
+        .attr("width", (screen.width/2))
+        .style("fill", t1.url());
+      svg.append("rect")
+        .attr("x", (screen.width/2))
+        .attr("y", 0)
+        .attr("height", screen.height)
+        .attr("width", (screen.width/2))
+        .style("fill", t2.url());
+    </script>
+
+    <div class="row intro">
+      <div class="col-xs-1"></div>
+      <div class="col-xs-10 intro-card">
         <h1 class="hello"><a href="/">hi, i'm patience!</a></h1>
         <div class="social">
           <a target="_blank" class="fa fa-github fa-fw fa-2x" href="http://github.com/patiences"></a>
@@ -46,32 +71,33 @@
           <a target="_blank" class="fa fa-medium fa-fw fa-2x" href="https://medium.com/@patiences"></a>
           <a class="fa fa-envelope-o fa-fw fa-2x" href="mailto:patienceshyu@gmail.com"></a>
         </div>
-      </div>
-    </div>
-    <div class="row"><br></div>
-    <div class="row">
-      <nav class="col-lg-2 navbar">
-          <ul class="navigation">
-            <li><a href="blog/listing">blog<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></a></li>
-            <li><a href="/resume/PatienceShyu.pdf">resume<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></a></li>
-          </ul>
-      </nav>
-      <div class="blurb col-lg-9 vertical-line">
-          <p>
-            I'm a software engineer from Vancouver, Canada, but now I live and work from Caprino Veronese, Italy.
-            I will graduate from the University of British Columbia in 2019 with a BSc in computer science.
-            I started my career as an full-stack engineering intern at <a target="_blank" href="http://www.tasktop.com">Tasktop</a> in 2016,
-            and then I worked on data deletion tooling at Microsoft in 2017.
-            In 2018 I worked on compiler optimization on <a target="_blank" href="https://github.com/pybee/voc">VOC</a> as part of
-            the <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> program.
-          </p>
-          <br>
-          <p>
-            Wanna chat about my work, or share <a target="_blank" href="http://abc.go.com/shows/the-chew/recipes/mario-batali-eggs-hell">an awesome recipe</a>? Please drop me a line via any of my online profiles.
-          </p>
+        <div class="row"><br></div>
+        <div class="row">
+          <nav class="col-xs-3 navbar">
+              <ul class="navigation">
+                <li><a href="blog/listing">blog<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></a></li>
+                <li><a href="/resume/PatienceShyu.pdf">resume<span class="fa fa-chevron-right fa-fw" style="font-size: 0.5em"></a></li>
+              </ul>
+          </nav>
+          <div class="blurb col-xs-9 vertical-line">
+              <p>
+                I'm a software engineer from Vancouver, Canada, but now I live and work from Caprino Veronese, Italy.
+                I will graduate from the University of British Columbia in 2019 with a BSc in computer science.
+                I started my career as an full-stack engineering intern at <a target="_blank" href="http://www.tasktop.com">Tasktop</a> in 2016,
+                and then I worked on data deletion tooling at Microsoft in 2017.
+                In 2018 I worked on compiler optimization on <a target="_blank" href="https://github.com/pybee/voc">VOC</a> as part of
+                the <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> program.
+              </p>
+              <br>
+              <p>
+                Wanna chat about my work, or share <a target="_blank" href="http://abc.go.com/shows/the-chew/recipes/mario-batali-eggs-hell">an awesome recipe</a>? Please drop me a line via any of my online profiles.
+              </p>
+            </div>
         </div>
+        <div class="row"><br></div>
+      </div>
+      <div class="col-xs-1"></div>
     </div>
-    <div class="row"><br></div>
   </div>
 </body>
 </html>

@@ -12,7 +12,7 @@ a:visited {
 
 .hello {
   font-family: 'Lobster', serif;
-  font-size: 7em;
+  font-size: 8vw;
   color: #000;
   display: inline;
 }
@@ -29,7 +29,7 @@ a:visited {
 
 .blurb {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: #000;
 }
 
@@ -121,4 +121,29 @@ img {
 #map {
     height:400px;
     width:600px;
+}
+
+.background svg {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.intro {
+  z-index: 2;
+
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.intro-card {
+  background: white;
+  box-shadow: 10px 10px rgba(0,0,0,0.5);
 }
