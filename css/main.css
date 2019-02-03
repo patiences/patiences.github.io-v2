@@ -1,20 +1,21 @@
-a {
+.blurb a {
   text-decoration: none !important;
 }
 
-a:link {
+.blurb a:link {
   color: deeppink;
 }
 
-a:visited {
+.blurb a:visited {
     color: darkturquoise;
 }
 
 .hello {
   font-family: 'Lobster', serif;
-  font-size: 8vw !important;
+  font-size: 7vw !important;
   color: #000;
   display: inline;
+  text-decoration: underline;
 }
 
 .hello > a {
@@ -29,7 +30,6 @@ a:visited {
 
 .blurb {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.8em !important;
   color: #000;
 }
 
@@ -152,4 +152,28 @@ img {
 
 .jumbotron {
   background-color: white !important;
+}
+
+.jumbotron p {
+  font-size: 2.2rem !important;
+}
+
+.links {
+  margin: 1em 0 1.5em 0;
+  text-decoration: underline;
+}
+
+.links a {
+  margin: auto 1em auto 0;
+  color: #000 !important;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8em;
+}
+
+@media(max-width: 600px) {
+  .links a {
+    margin: auto 1.5em auto 0;
+    color: #000 !important;
+    font-size: 16px;
+  }
 }

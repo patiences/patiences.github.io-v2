@@ -37,41 +37,48 @@
 </head>
 
 <body>
+  <div id="example" class="background"></div>
+
+  <script>
+    var svg = d3.select("#example").append("svg");
+    var t1 = textures.paths().d("crosses").lighter().fill("mediumorchid").background("lightskyblue");
+    var t2 = textures.circles().thicker().fill("gold").background("crimson");
+
+    var body = document.body,
+        html = document.documentElement;
+
+    var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    var width = Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth);
+
+    svg.call(t1);
+    svg.call(t2);
+    svg.append("rect")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("height", height)
+      .attr("width", (width/2))
+      .style("fill", t1.url());
+    svg.append("rect")
+      .attr("x", (width/2))
+      .attr("y", 0)
+      .attr("height", height)
+      .attr("width", (width/2))
+      .style("fill", t2.url());
+  </script>
+
   <div class="container-fluid">
-    <div id="example" class="background"></div>
-
-    <script>
-      var svg = d3.select("#example").append("svg");
-      var t1 = textures.paths().d("crosses").lighter().fill("mediumorchid").background("lightskyblue");
-      var t2 = textures.circles().thicker().fill("gold").background("crimson");
-
-      svg.call(t1);
-      svg.call(t2);
-      svg.append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("height", screen.height)
-        .attr("width", (screen.width/2))
-        .style("fill", t1.url());
-      svg.append("rect")
-        .attr("x", (screen.width/2))
-        .attr("y", 0)
-        .attr("height", screen.height)
-        .attr("width", (screen.width/2))
-        .style("fill", t2.url());
-    </script>
-
     <div class="row intro">
       <div class="col-xs-1"></div>
       <div class="col-xs-10 intro-card jumbotron">
         <h1 class="hello"><a href="/">hi, i'm patience!</a></h1>
-        <div class="social">
-          <a target="_blank" class="fa fa-github fa-fw fa-2x" href="http://github.com/patiences"></a>
-          <a target="_blank" class="fa fa-linkedin fa-fw fa-2x" href="http://linkedin.com/in/patienceshyu"></a>
-          <a target="_blank" class="fa fa-medium fa-fw fa-2x" href="https://medium.com/@patiences"></a>
-          <a class="fa fa-envelope-o fa-fw fa-2x" href="mailto:patienceshyu@gmail.com"></a>
+        <div class="links">
+          <a target="_blank" href="http://github.com/patiences">github</a>
+          <a target="_blank" href="http://linkedin.com/in/patienceshyu">linkedin</a>
+          <a target="_blank" href="https://medium.com/@patiences">medium</a>
+          <a target="_blank" href="blog/listing.html">blog</a>
+          <a target="_blank" href="resume/PatienceShyu.pdf">resume</a>
+          <a href="mailto:patienceshyu@gmail.com">email</a>
         </div>
-        <div class="row"><br></div>
         <div class="row container">
           <div class="blurb">
               <p>
