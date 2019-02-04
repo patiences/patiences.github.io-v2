@@ -36,9 +36,7 @@
   <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 
-<body>
-  <div id="example" class="background"></div>
-
+<body id="example" class="background">
   <script>
     var svg = d3.select("#example").append("svg");
     var t1 = textures.paths().d("crosses").lighter().fill("mediumorchid").background("lightskyblue");
@@ -47,7 +45,6 @@
     var body = document.body,
         html = document.documentElement;
 
-    var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
     var width = Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth);
 
     svg.call(t1);
@@ -55,15 +52,17 @@
     svg.append("rect")
       .attr("x", 0)
       .attr("y", 0)
-      .attr("height", height)
+      .attr("height", 10000)
       .attr("width", (width/2))
       .style("fill", t1.url());
     svg.append("rect")
       .attr("x", (width/2))
       .attr("y", 0)
-      .attr("height", height)
+      .attr("height", 10000)
       .attr("width", (width/2))
       .style("fill", t2.url());
+
+    svg.attr("width", "100%").attr("height", "100%");
   </script>
 
   <div class="container-fluid">

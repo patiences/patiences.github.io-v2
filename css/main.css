@@ -12,14 +12,18 @@
 
 .hello {
   font-family: 'Lobster', serif;
-  font-size: 7vw !important;
+  font-size: 8vw !important;
   color: #000;
   display: inline;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .hello > a {
   color: #000;
+}
+
+.hello > a:hover {
+  text-decoration: none !important;
 }
 
 .social {
@@ -131,6 +135,7 @@ img {
   left: 0px;
   height: 100%;
   width: 100%;
+  overflow: visible !important;
 }
 
 .intro {
@@ -166,7 +171,7 @@ img {
 .links a {
   margin: auto 1em auto 0;
   color: #000 !important;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Bookman Old Style';
   font-size: 1.8em;
 }
 
